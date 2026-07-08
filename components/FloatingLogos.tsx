@@ -43,8 +43,12 @@ export default function FloatingLogos() {
     // Colors that fit the Spider-Verse theme
     const colors = ["var(--color-spider-magenta)", "var(--color-spider-blue)", "var(--color-spider-yellow)", "var(--color-spider-purple)"];
     
+    // Detect mobile to lower node count
+    const isMobile = window.innerWidth < 768;
+    const logoCount = isMobile ? 4 : 12;
+
     // Generate random items on client side to avoid hydration mismatches
-    const generatedItems = Array.from({ length: 12 }).map((_, i) => ({
+    const generatedItems = Array.from({ length: logoCount }).map((_, i) => ({
       id: `logo-${i}`,
       left: Math.random() * 100, // random start X position (0-100vw)
       duration: Math.random() * 20 + 25, // 25s to 45s duration

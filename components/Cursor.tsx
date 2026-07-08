@@ -11,7 +11,7 @@ export default function Cursor() {
 
   useEffect(() => {
     // Check if device has a touch screen, if so, disable custom cursor
-    if (window.matchMedia("(pointer: coarse)").matches) return;
+    if (window.matchMedia("(pointer: coarse)").matches || 'ontouchstart' in window || navigator.maxTouchPoints > 0) return;
 
     const onMouseMove = (e: MouseEvent) => {
       setPosition({ x: e.clientX, y: e.clientY });

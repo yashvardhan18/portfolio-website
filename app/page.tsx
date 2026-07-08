@@ -16,17 +16,17 @@ export default function Home() {
 
       {/* Moving gradient orb in background - LIGHT MODE */}
       <div 
-        className="fixed top-0 left-0 w-[600px] h-[600px] -translate-x-1/2 -translate-y-1/4 animate-pulse pointer-events-none z-0 dark:hidden"
+        className="hidden md:block fixed top-0 left-0 w-[600px] h-[600px] -translate-x-1/2 -translate-y-1/4 animate-pulse pointer-events-none z-0 dark:hidden"
         style={{ background: 'radial-gradient(circle, var(--color-spider-magenta) 0%, transparent 60%)', opacity: 0.6 }}
       />
       <div 
-        className="fixed bottom-0 right-0 w-[600px] h-[600px] translate-x-1/2 translate-y-1/4 animate-pulse delay-1000 pointer-events-none z-0 dark:hidden"
+        className="hidden md:block fixed bottom-0 right-0 w-[600px] h-[600px] translate-x-1/2 translate-y-1/4 animate-pulse delay-1000 pointer-events-none z-0 dark:hidden"
         style={{ background: 'radial-gradient(circle, var(--color-spider-blue) 0%, transparent 60%)', opacity: 0.6 }}
       />
 
       {/* Moving gradient orb in background - DARK MODE */}
-      <div className="hidden dark:block fixed top-1/4 -left-64 w-96 h-96 bg-[var(--color-spider-magenta)] rounded-full mix-blend-screen filter blur-[150px] opacity-30 animate-pulse pointer-events-none z-0" />
-      <div className="hidden dark:block fixed bottom-1/4 -right-64 w-96 h-96 bg-[var(--color-spider-blue)] rounded-full mix-blend-screen filter blur-[150px] opacity-30 animate-pulse delay-1000 pointer-events-none z-0" />
+      <div className="hidden dark:md:block fixed top-1/4 -left-64 w-96 h-96 bg-[var(--color-spider-magenta)] rounded-full mix-blend-screen filter blur-[150px] opacity-30 animate-pulse pointer-events-none z-0" />
+      <div className="hidden dark:md:block fixed bottom-1/4 -right-64 w-96 h-96 bg-[var(--color-spider-blue)] rounded-full mix-blend-screen filter blur-[150px] opacity-30 animate-pulse delay-1000 pointer-events-none z-0" />
 
       <Hero />
       <Experience />
