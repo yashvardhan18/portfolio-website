@@ -6,6 +6,7 @@ import ThemeToggle from "@/components/ThemeToggle";
 import Cursor from "@/components/Cursor";
 import FloatingResume from "@/components/FloatingResume";
 import ConnectWallet from "@/components/ConnectWallet";
+import GoToTop from "@/components/GoToTop";
 
 const bangers = Bangers({
   weight: "400",
@@ -36,6 +37,7 @@ export default function RootLayout({
           <ConnectWallet />
           <ThemeToggle />
           <FloatingResume />
+          <GoToTop />
           {children}
         </ThemeProvider>
       </body>
